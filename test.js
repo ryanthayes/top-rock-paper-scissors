@@ -1,3 +1,18 @@
+// If ... else ...
+function playRound(playerSelection, computerSelection){
+if (playerSelection === computerSelection){
+    return 'The result is a tie!';
+} else if (
+    (playerSelection === 'rock' && computerSelection === 'scissors') || 
+    (playerSelection === 'scissors' && computerSelection === 'paper') || 
+    (playerSelection === 'paper' && computerSelection === 'rock')
+    ){
+    return 'You win!';
+} else {
+    return 'You lose!';
+}
+} 
+
 // Test switch 
 
 function playRound(playerSelection, computerSelection){
