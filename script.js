@@ -1,82 +1,87 @@
-// UI Elements
-const main = document.querySelector('#main');
+// Global variables
 
-const rock = document.createElement('button');
-const paper = document.createElement('button');
-const scissors = document.createElement('button');
-const results = document.createElement('div');
+let playerScore = 0;
+let computerScore = 0;
+let roundWinner = '';
 
-rock.addEventListener('click', () => {
-    let playerSelection = 'rock';
-    let computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
-    console.log(`Your choice is ${playerSelection}, the computer's choice is ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-})
-paper.addEventListener('click', () => {
-    let playerSelection = 'paper';
-    let computerSelection = getComputerChoice();
-    console.log(playerSelection);
-    playRound(playerSelection, computerSelection);
-    console.log(`Your choice is ${playerSelection}, the computer's choice is ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-})
-scissors.addEventListener('click', () => {
-    let playerSelection = 'scissors';
-    console.log(playerSelection);
-    let computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
-    console.log(`Your choice is ${playerSelection}, the computer's choice is ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-})
+const displayPlayerScore = document.querySelector('.player-score');
+const displayComputerScore = document.querySelector('.computer-score');
+const displayRoundResults = document.querySelector('.round-results');
+const displayFinalResults = document.querySelector('.final-results');
+const endGame = document.querySelector('.end-game');
 
-main.appendChild(rock);
-rock.textContent = 'Rock';
-main.appendChild(paper);
-paper.textContent = 'Paper';
-main.append(scissors);
-scissors.textContent = 'Scissors';
-main.appendChild(results);
-
-// Create a FUNCTION called getComputerChoice that will randomly return either 'Rock', 'Paper', of 'Scissors'.
-
+// Generate random number por computer choice
 function getComputerChoice() {
-    const choice = ["rock", "paper", "scissors"];
+    const choice = ["Rock", "Paper", "Scissors"];
     return choice[Math.floor(Math.random() * choice.length)];
 }
 
-// Create a FUNCTION that plays a single round of Rock Paper Scissors that takes TWO PARAMETERS: playerSelection and computerSelection
-// Return the STRING that declares the winner of the rounds. For example, 'You Lose! Paper beats Rock'
+// Event listeners for player buttons
+const playerButtons = document.querySelectorAll('button');
+    playerButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            let playerSelection = button.className;
+            const computerSelection = getComputerChoice();
+            playRound(playerSelection, computerSelection);
+            isEndGame();
+    })
+})
+
+function roundResults() {
+    if (roundWinner === 'tie') {
+        displayRoundResults.textContent = 'This round was a DRAW!'
+    } else if (roundWinner === 'player') {
+        displayRoundResults.textContent = 'You win this round!'
+    } else {
+        displayRoundResults.textContent = 'You lose this round!' 
+    } 
+}
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
-        return 'The result is a tie!';
+        roundWinner = 'tie';
     } else if (
-        (playerSelection === 'rock' && computerSelection === 'scissors') || 
-        (playerSelection === 'scissors' && computerSelection === 'paper') || 
-        (playerSelection === 'paper' && computerSelection === 'rock')
-        ){
-        return 'You win!';
+        (playerSelection === 'Rock' && computerSelection === 'Scissors') || 
+        (playerSelection === 'Scissors' && computerSelection === 'Paper') || 
+        (playerSelection === 'Paper' && computerSelection === 'Rock')
+    ){
+        playerScore++;
+        roundWinner = 'player';
+        displayPlayerScore.textContent = playerScore;
     } else {
-        return 'You lose!';
+        computerScore++;
+        roundWinner = 'computer';
+        displayComputerScore.textContent = computerScore;
     }
+    roundResults();
+} 
+
+function resetGame() {
+    // Disable player buttons
+    document.querySelector(".Rock").disabled = true;
+    document.querySelector(".Paper").disabled = true;
+    document.querySelector(".Scissors").disabled = true;
+
+    // Create replay button
+    const replayGameButton = document.createElement("button");
+    replayGameButton.textContent = "Play Again!";
+    endGame.appendChild(replayGameButton);
+
+    // Reload page when replay button clicked
+    replayGameButton.addEventListener('click', () => {
+        location.reload();
+    })
 }
 
-
-// Write FUNCTION called game() that will play a round 5 times
-
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-        
-//         // Make your function's playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK, etc.)  
-//         let playerSelection = prompt("Ready Player One: Please choose either rock, paper or scissors, and type into the box below.").toLowerCase(); 
-        
-//         let computerSelection = getComputerChoice();
-
-//         // Print results of player choice and computer choice to verify logic works
-//         console.log(`Your choice is ${playerSelection}, the computer's choice is ${computerSelection}.`);
-//         console.log(playRound(playerSelection, computerSelection));
-//     }
-// }
-
-// game();
+function isEndGame() {
+    if (playerScore === 5 || computerScore === 5) {
+        if (playerScore > computerScore) {
+            displayFinalResults.textContent = 'You WON!';
+            resetGame();
+        } 
+        else if (computerScore > playerScore) {
+            displayFinalResults.textContent = 'You LOST!';
+            resetGame();
+        }
+    } 
+}
