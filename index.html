@@ -11,116 +11,125 @@
 </head>
 
 <body>
-    <!-- header section -->
-    <header id="header" class="header">
-        
-        <div class="container flex flex-columns align-center">
-            <h1 class="title sr-only">Rock Paper Scissors</h1>
-            <div>
-                <img class="banner" src="/images/banner.jpg" alt="banner showing two hands playing rock, paper, scissors">
-            </div>
-            <div>
-                <h2 class="sub-title text-align-center">First to FIVE Wins!</h2>
-            </div>
+    <div class="container">
+        <!-- header section -->
+        <header id="header" class="header">
+                
+            <div class="flex flex-columns align-center">
+                <h1 class="title sr-only">Rock Paper Scissors</h1>
+                
+                <div>
+                    <img class="banner" src="/images/banner.jpg" alt="banner showing two hands playing rock, paper, scissors">
+                </div>
 
-        </div>
-        
-    </header>
-    
-    <section class="main" id="main">
-        
-        <div class="container flex flex-columns align-items-center">
+            </div>
             
-            <!-- <div class="end-game flex flex-columns align-items-center">
-                    
-                <div>
-                    <h2 class="results-final text-align-center"></h2>
-                </div>
-                
-                <div>
-                    <button class="btn btn-replay">Replay Game</button>
-                </div>
-                    
-            </div> -->
+        </header>
 
-            <div class="game flex flex-columns align-items-center">
-                
-                <div class="game-play flex">
-                    
-                    <div class="container-player flex flex-columns align-items-center">
-                        
-                        <div class="score flex align-items-center">
-                            <h2 class="score-title">Player Score:</h2>
-                        <p class="score-player">0</p>
-                        </div>
+        <section class="main" id="main">
+            
+            <div class="flex flex-columns align-items-center">
 
-                        <div class="choice">
-                            <img id="player-choice" src="/images/question-mark.png" height="50px" alt="">
-                        </div>
+                <div class="game flex flex-columns align-items-center">
+                    
+                    <!-- game container section -->
+                    <div class="game-play flex">
                         
-                        <div class="buttons-player flex">
-                            
-                            <div id="player-rock" class="btn btn-player flex flex-columns align-center" data-button="rock">
-                                <img src="/images/icon-rock.png" height="50px" alt="">
+                        <!-- player section -->
+                        <div class="container-player flex flex-columns align-items-center">
+
+                            <div class="container-score">
+                                <div class="score flex align-items-center">
+                                    <h2 class="score-title-player">Player Score:</h2>
+                                <p class="score-player">0</p>
+                                </div>
+                            </div>
+
+                            <div class="round-player flex flex-columns align-items-center">
+                                <div class="choice">
+                                    <img id="player-choice" src="/images/question-mark.png" height="50px" alt="">
+                                </div>
+
+                                <div class="buttons-player flex">
+                                
+                                    <div id="player-rock" class="btn btn-player flex flex-columns align-center" data-button="rock">
+                                        <img src="/images/icon-rock.png" height="50px" alt="">
+                                    </div>
+                                    
+                                    <div id="player-paper" class="btn btn-player flex flex-columns align-center" data-button="paper">
+                                        <img src="/images/icon-paper.png" height="50px" alt="">
+                                    </div>
+                                    
+                                    <div id="player-scissors" class="btn btn-player flex flex-columns align-center" data-button="scissors">
+                                        <img src="/images/icon-scissors.png" height="50px" alt="">
+                                    </div>
+                                
+                                </div>
                             </div>
                             
-                            <div id="player-paper" class="btn btn-player flex flex-columns align-center" data-button="paper">
-                                <img src="/images/icon-paper.png" height="50px" alt="">
-                            </div>
                             
-                            <div id="player-scissors" class="btn btn-player flex flex-columns align-center data-button="scissors"">
-                                <img src="/images/icon-scissors.png" height="50px" alt="">
-                            </div>
                         
                         </div>
+                    
+                        <!-- computer section -->
+                        <div class="container-computer flex flex-columns align-items-center">
+                            
+                            <div class="container-score">
+                                <div class="score flex align-items-center">
+                                    <h2 class="score-title-computer">Computer Score:</h2>
+                                    <p class="score-computer">0</p>
+                                </div>
+                            </div>
+
+                            <div class="round-computer flex flex-columns align-items-center">
+                                
+                                <div class="choice">
+                                    <img id="computer-choice" src="/images/question-mark.png" height="50px" alt="">
+                                </div>
+            
+                                <div class="buttons-computer flex">
+                                    
+                                    <div class="btn btn-computer flex flex-columns align-center rock" data-button="rock">
+                                        <img id="computer-rock" class="" src="/images/icon-rock.png" height="50px" alt="">
+                                    </div>
+                                    
+                                    <div id="computer-paper" class="btn btn-computer flex flex-columns align-center paper" data-button="paper">
+                                        <img class="" src="/images/icon-paper.png" height="50px" alt="">
+                                    </div>
+                                    
+                                    <div id="computer-scissors" class="btn btn-computer flex flex-columns align-center scissors" data-button="scissors">
+                                        <img class="" src="/images/icon-scissors.png" height="50px" alt="">
+                                    </div>
+                            
+                                </div>
+                            </div>
+
+
                     
                     </div>
                     
-                    <div class="container-computer flex flex-columns align-items-center">
-
-                        <div class="score flex align-items-center">
-                            <h2 class="score-title">Computer Score:</h2>
-                            <p class="score-computer">0</p>
-                        </div>
-                        
-                        <div class="choice">
-                            <img id="computer-choice" src="/images/question-mark.png" height="50px" alt="">
-                        </div>
-    
-                        <div class="buttons-computer flex">
-                            
-                            <div class="btn btn-computer flex flex-columns align-center rock" data-button="rock">
-                                <img id="computer-rock" class="" src="/images/icon-rock.png" height="50px" alt="">
-                            </div>
-                            
-                            <div id="computer-paper" class="btn btn-computer flex flex-columns align-center paper" data-button="paper">
-                                <img class="" src="/images/icon-paper.png" height="50px" alt="">
-                            </div>
-                            
-                            <div id="computer-scissors" class="btn btn-computer flex flex-columns align-center scissors data-button="scissors">
-                                <img class="" src="/images/icon-scissors.png" height="50px" alt="">
-                            </div>
-                    </div>
-                
                 </div>
-                  
+            
             </div>
         
-        </div>
-       
-    </section>
-    
-    <section id="end-game-modal" class="modal hidden">
-        <div class="end-game flex flex-columns align-items-center">
-            <h2 class="results-final text-align-center"></h2>
-            <button class="btn btn-replay">Play Another Round</button>
-        </div>
-    </section>
-    <div class="overlay hidden"></div>
-    
-    <footer>
+        </section>
 
-    </footer>
+        <!-- end game modal section -->
+        <section id="end-game-modal" class="modal hidden">
+            <div class="end-game flex flex-columns align-items-center">
+                <h2 class="results-final text-align-center"></h2>
+                <button class="btn btn-replay">Play Another Round</button>
+            </div>
+        </section>
+        <div class="overlay hidden"></div>
 
+        <footer id="footer" class="text-align-center">
+            <div class="attribution flex flex-columns justify-content">
+                <p>Banner courtesy of: <a href="https://www.vecteezy.com/vector-art/14320397-rock-paper-scissors-cartoon-banner-with-hands">Yuliya Pauliukevich</a></p>
+                <p>Icons courtesy of: <a href="https://icon-library.com/icon/rock-paper-scissors-icon-16.html.html">Rock</a> | <a href="https://icon-library.com/icon/rock-paper-scissors-icon-17.html">Paper</a> | <a href="https://icon-library.com/icon/rock-paper-scissors-icon-15.html.html">Scissors</a> 
+                </p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
