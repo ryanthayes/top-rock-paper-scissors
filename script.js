@@ -165,25 +165,25 @@ function removeHover() {
 function updateChoices(playerSelection, computerSelection) {
     switch (playerSelection) {
       case 'rock':
-        document.getElementById('player-choice').src = "/images/icon-rock.png"; // Replace existing img with new img
+        document.getElementById('player-choice').src = "images/icon-rock.png"; // Replace existing img with new img
         break
       case 'paper':
-        document.getElementById('player-choice').src = "/images/icon-paper.png";
+        document.getElementById('player-choice').src = "images/icon-paper.png";
         break
       case 'scissors':
-        document.getElementById('player-choice').src = "/images/icon-scissors.png";
+        document.getElementById('player-choice').src = "images/icon-scissors.png";
         break
     }
   
     switch (computerSelection) {
       case 'rock':
-        document.getElementById('computer-choice').src = "/images/icon-rock.png";
+        document.getElementById('computer-choice').src = "images/icon-rock.png";
         break
       case 'papers':
-        document.getElementById('computer-choice').src = "/images/icon-paper.png";
+        document.getElementById('computer-choice').src = "images/icon-paper.png";
         break
       case 'scissors':
-        document.getElementById('computer-choice').src = "/images/icon-scissors.png";
+        document.getElementById('computer-choice').src = "images/icon-scissors.png";
         break
     }
   }
