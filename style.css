@@ -1,3 +1,257 @@
-button {
+/* === CSS VARIABLES === */
+
+:root {
+
+    /* Colors */
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsl(30, 60%, 2%);
+    --clr-neutral-900: hsl(0, 0%, 0%);
+
+    --clr-primary-400: hsl(32, 100%, 50%);
+    
+    --clr-accent-400: hsl(198, 100%, 51%);
+
+    /* Fonts */
+
+    --ff-primary: 'Inter', sans-serif;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --fs-300: .875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2rem;
+    --fs-900: 4rem;
+
+    --br-sm: .5em;
+    --br-md: 1em;
+    --br-lg: 2em;
+
+    /* Spacers */
+    --spacer-sm: .5em;
+    --spacer-md: 1em;
+    --spacer-lg: 2em;
+    
+}
+
+@media (max-width: 35em) {
+    :root {
+        --fs-300: .5rem;
+        --fs-400: .75rem;
+        --fs-600: 1rem;
+        --fs-700: 1.5rem;
+        --fs-900: 2.5rem;
+    }
+}
+
+/* === CSS RESET === */
+
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* === GENERAL STYLES === */
+
+body {
+    font-family: var(--ff-primary);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: var(--clr-neutral-400);
+}
+
+.sub-title {
+    margin: 2rem 0;
+    color: var(--clr-accent-400);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+}
+
+.end-game {
+    margin-bottom: 4rem;
+}
+
+.results-final {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-400);
+    text-transform: uppercase;
+}
+
+.round-title,
+.final-title,
+.score-title {
+    color: var(--clr-primary-400); 
+}
+
+.round-title,
+.score-title {
+    font-size: var(--fs-600);
+}
+
+.game-play,
+.results-final,
+.results-round {
+    margin: var(--spacer-md) 0;
+}
+.score {
+    gap: var(--spacer-md);
+}
+
+.score-player,
+.score-computer
+ {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent-400);
+}
+
+.container-player,
+.container-computer {
+    margin: 0 2rem 0 2rem;
+}
+
+.buttons-player,
+.buttons-computer,
+.container-player,
+.container-computer {
+    gap: var(--spacer-lg);
+}
+
+.game-play {
+    gap: var(--spacer-lg)
+}
+
+/* ==== BUTTONS === */
+
+.btn {
     cursor: pointer;
+}
+
+.player-hover {
+    opacity: 50%;
+}
+.computer-pick {
+    opacity: 30%;
+    transition: all 2s ease;
+}
+
+.btn-replay {
+    visibility: hidden;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-400);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+    padding: .5rem 1.25rem;
+    line-height: 1;
+    border: none;
+    border-radius: var(--br-lg); 
+}
+.btn-replay:hover {
+    background-color: var(--clr-accent-400);
+}
+
+/* ==== MODAL === */
+
+.modal {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    min-height: 250px;
+    padding: var(--spacer-lg);
+    color: var(--clr-primary-400);
+    background-color: var(--clr-neutral-400);
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  
+
+/* ==== UTILITY CLASSES === */
+
+.flex {
+    display: flex;
+}
+.flex-columns {
+    flex-direction: column;
+}
+.align-items-center {
+    align-items: center;
+}
+.text-align-center {
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+}
+
+@media (max-width: 35em) {
+    .game-play {
+        flex-direction: column;
+    }
 }
