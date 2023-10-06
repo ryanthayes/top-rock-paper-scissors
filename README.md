@@ -25,7 +25,6 @@ I went beyond the original project scope and used this project to practice all o
 ### Screenshot
 
 ![](./preview/desktop.png)
-![](./preview/mobile.png)
 
 ### Links
 
