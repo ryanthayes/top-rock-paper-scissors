@@ -1,5 +1,4 @@
 # Rock, Paper, Scissors
-![preview](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/fcf27ff3-fc0c-4fc7-9f84-e27e43c0d0e5)
 
 <p align="center">
   <a href="#overview">Overview</a> •
@@ -28,6 +27,8 @@ The purpose of this project was to implement the grade-school classic "rock pape
 ### Built With
 
  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+![preview](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/fcf27ff3-fc0c-4fc7-9f84-e27e43c0d0e5)
 
 ## What I learned
 
