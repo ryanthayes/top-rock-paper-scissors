@@ -7,7 +7,7 @@
   <a href="#contact">Contact</a>
 </p>
 
-![rock-paper-scissors](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/e4523789-6fff-4841-abfb-bf552ff3c898)
+![rock-paper-scissors](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/e67cd5a9-6fbb-40f0-b28a-173e940d69ab)
 
 ## Overview
 
