@@ -7,7 +7,7 @@
   <a href="#contact">Contact</a>
 </p>
 
-![preview](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/fcf27ff3-fc0c-4fc7-9f84-e27e43c0d0e5)
+![rock-paper-scissors](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/e4523789-6fff-4841-abfb-bf552ff3c898)
 
 ## Overview
 
@@ -22,6 +22,8 @@ The purpose of this project was to implement the grade-school classic "rock pape
 - Used HTML5 **semantic elements** for better readability and structure
 - Used CSS3 **grid** and **flex** to manage layouts
 - Used **Git** and **GitHub** for project management
+
+![preview](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/fcf27ff3-fc0c-4fc7-9f84-e27e43c0d0e5)
 
 ### Live Version
 **[Rock, Paper, Scissors](https://ryanthayes.github.io/top-rock-paper-scissors/)**
