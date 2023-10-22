@@ -1,13 +1,13 @@
 # Rock, Paper, Scissors
 
+![rock-paper-scissors](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/e67cd5a9-6fbb-40f0-b28a-173e940d69ab)
+
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#what-i-learned">What I learned</a> •
   <a href="#useful-resources">Useful Resources</a> •
   <a href="#contact">Contact</a>
 </p>
-
-![rock-paper-scissors](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/e67cd5a9-6fbb-40f0-b28a-173e940d69ab)
 
 ## Overview
 
