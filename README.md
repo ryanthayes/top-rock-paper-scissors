@@ -23,6 +23,8 @@ The purpose of this project was to implement the grade-school classic "rock pape
 - Used CSS3 **grid** and **flex** to manage layouts
 - Used **Git** and **GitHub** for project management
 
+### Preview
+
 ![preview](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/fcf27ff3-fc0c-4fc7-9f84-e27e43c0d0e5)
 
 ### Live Version
