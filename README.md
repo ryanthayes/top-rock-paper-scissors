@@ -1,5 +1,6 @@
 # Rock, Paper, Scissors
-![screenshot](./images/preview.png)
+![preview](https://github.com/ryanthayes/top-rock-paper-scissors/assets/127283656/fcf27ff3-fc0c-4fc7-9f84-e27e43c0d0e5)
+
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#what-i-learned">What I learned</a> •
